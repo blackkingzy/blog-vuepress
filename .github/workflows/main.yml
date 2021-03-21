@@ -4,13 +4,13 @@ name: Blog Deploy
 # 触发 workflow 的事件
 on:
     push:
-        # 分支随意
         branches:
             - main
 
 # 一个workflow由执行的一项或多项job
 jobs:
     # 一个job任务，任务名为build
+    name: Blog Deploy
     build:
         # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
         runs-on: ubuntu-latest
