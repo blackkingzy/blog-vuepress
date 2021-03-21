@@ -1,0 +1,48 @@
+# 一个 workflow，名字为Blog Deploy
+name: Blog Deploy
+
+# 触发 workflow 的事件
+on:
+  push:
+    # 分支随意
+    branches:
+      - master
+
+# 一个workflow由执行的一项或多项job
+jobs:
+    # 一个job任务，任务名为build
+    build:
+        # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+        runs-on: ubuntu-latest
+        # steps是每个Job的运行步骤，可以包含一个或多个步骤
+        steps:
+            # action命令，切换分支获取源码
+            - name: Checkout
+                # 使用action库  actions/checkout@v2获取源码
+            - uses: actions/checkout@v2
+              with:
+                ref: master              
+            # action命令，安装Node 14
+            - name: install Node.js 14
+                # 使用action库  actions/setup-node安装node
+            - uses: actions/setup-node@v2
+              with:
+                node-version: '14'
+                check-latest: true  # 检查14最新的版本
+            # action命令，install && test
+            - name: npm install and build
+                # 运行的命令或者 action
+            - run: npm install
+            - run: npm build
+            - name: Deploy to Server    #通过ssh将文件传到阿里云服务器上 https://github.com/marketplace/actions/ssh-deploy
+            - uses: easingthemes/ssh-deploy@v2.1.5
+              env:
+                  SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}  # 私钥部分,公钥到阿里云的authorized_keys去找
+                  # ARGS: "-rltgoDzvO --delete"
+                  SOURCE: "docs/.vuepress/dist"  # The source directory, path relative to $GITHUB_WORKSPACE root, eg: dist/
+                  REMOTE_PORT: "22"  # ssh port
+                  REMOTE_HOST: "fishchat.online"  # 主机名
+                  REMOTE_USER: "root" # 连接用户
+                  TARGET: "/root/blog"
+                  # EXCLUDE: ""
+                  # 去阿里云创建并绑定秘钥,私钥就能下载一次,回去删掉之前的重新创建
