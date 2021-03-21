@@ -1,3 +1,10 @@
+---
+title: 快速拥有属于自己的博客流程
+date: 2021-3-19
+author: 张越
+location: DaLian
+---
+
 ## 1、fork 此项目
 
 将此项目 fork 到自己的 github 仓库，从此它就属于你了。

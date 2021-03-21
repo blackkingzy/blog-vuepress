@@ -15,17 +15,25 @@
                         <a
                             class="github"
                             target="_blank"
-                            href="2021/01/19/info/#%E6%BA%90%E7%A0%81%E5%9C%B0%E5%9D%80"
+                            href="2021/03/18/why/#_5、源码地址"
                         ></a>
                     </li>
                     <li>
-                        <a class="wechat"></a>
+                        <a
+                            class="wechat"
+                            target="_blank"
+                            href="2021/03/18/why/#_6、微信二维码"
+                        ></a>
                     </li>
                     <li>
                         <a class="qq"></a>
                     </li>
                     <li class="site_details">
-                        <a class="Info"></a>
+                        <a
+                            class="Info"
+                            target="_blank"
+                            href="2021/03/18/why/#_6、微信二维码"
+                        ></a>
                     </li>
                 </ul>
             </div>

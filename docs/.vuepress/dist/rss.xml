@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>BLACKKINGZY</title>
+        <link>http://www.blackyue.com</link>
+        <description>study and life</description>
+        <lastBuildDate>Sun, 21 Mar 2021 14:56:36 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+        <atom:link href="http://www.blackyue.com/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[为什么要搭建个人博客？]]></title>
+            <link>http://www.blackyue.com/2021/03/18/why/</link>
+            <guid>http://www.blackyue.com/2021/03/18/why/</guid>
+            <pubDate>Wed, 17 Mar 2021 16:00:00 GMT</pubDate>
+            <enclosure url="http://8.131.241.109:8080/wechat.jpeg">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[快速拥有属于自己的博客流程]]></title>
+            <link>http://www.blackyue.com/2021/03/19/owning-a-blog-process/</link>
+            <guid>http://www.blackyue.com/2021/03/19/owning-a-blog-process/</guid>
+            <pubDate>Thu, 18 Mar 2021 16:00:00 GMT</pubDate>
+            <description><![CDATA[将此项目 fork 到自己的 github 仓库，从此它就属于你了。]]></description>
+        </item>
+    </channel>
+</rss>
