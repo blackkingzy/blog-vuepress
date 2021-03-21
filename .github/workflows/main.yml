@@ -27,8 +27,8 @@ jobs:
                   check-latest: true # 检查14最新的版本
             # action命令，install && test
             - name: npm install and build # 运行的命令或者 action
-              run: npm install
-              run: npm build
+            - run: npm install
+            - run: npm build
             - name: Deploy to Server #通过ssh将文件传到阿里云服务器上 https://github.com/marketplace/actions/ssh-deploy
               uses: easingthemes/ssh-deploy@v2.1.5
               env:
