@@ -21,7 +21,7 @@ jobs:
             # 使用action库  actions/checkout@v2获取源码
             - uses: actions/checkout@v2
               with:
-                  ref: master
+                  ref: main
             # action命令，安装Node 14
             - name:
                   install Node.js 14
