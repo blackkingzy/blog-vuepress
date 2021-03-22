@@ -35,7 +35,7 @@ jobs:
               uses: easingthemes/ssh-deploy@v2.1.5
               env:
                   SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # 私钥部分,公钥到阿里云的authorized_keys去找
-                  # ARGS: "-rltgoDzvO --delete"
+                  ARGS: "-avz --delete"
                   SOURCE: "docs/.vuepress/dist" # The source directory, path relative to $GITHUB_WORKSPACE root, eg: dist/
                   REMOTE_PORT: ${{ secrets.REMOTE_PORT }} # ssh port
                   REMOTE_HOST: ${{ secrets.REMOTE_HOST }} # 主机名
