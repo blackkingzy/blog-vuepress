@@ -36,11 +36,7 @@
 name: Blog Deploy
 
 # 触发 workflow 的事件
-on:
-  push:
-    # 分支随意
-    branches:
-      - master
+on: push
 
 # 一个workflow由执行的一项或多项job
 jobs:
