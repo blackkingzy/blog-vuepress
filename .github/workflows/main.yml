@@ -31,16 +31,26 @@ jobs:
               run: npm install
             - name: npm build
               run: npm run build
-            - name: Deploy to Server #通过ssh将文件传到阿里云服务器上 https://github.com/marketplace/actions/ssh-deploy
-              uses: easingthemes/ssh-deploy@v2.1.5
-              env:
-                  SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # 私钥部分,公钥到阿里云的authorized_keys去找
-                  ARGS: "-avz --delete"
-                  SOURCE: "docs/.vuepress/dist" # The source directory, path relative to $GITHUB_WORKSPACE root, eg: dist/
-                  REMOTE_PORT: ${{ secrets.REMOTE_PORT }} # ssh port
-                  REMOTE_HOST: ${{ secrets.REMOTE_HOST }} # 主机名
-                  REMOTE_USER: ${{ secrets.REMOTE_USER }} # 连接用户
-                  TARGET: ${{ secrets.TARGET }}
+            - name: multiple command
+              uses: appleboy/ssh-action@master
+              with:
+                host: ${{ secrets.REMOTE_HOST }}
+                username: ${{ secrets.REMOTE_USER }}
+                key: ${{ secrets.PRIVATE_KEY }}
+                port: ${{ secrets.REMOTE_PORT }}
+                script: |
+                 whoami
+                 ls -al
+            # - name: Deploy to Server #通过ssh将文件传到阿里云服务器上 https://github.com/marketplace/actions/ssh-deploy
+              # uses: easingthemes/ssh-deploy@v2.1.5
+              # env:
+                  # SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # 私钥部分,公钥到阿里云的authorized_keys去找
+                  # ARGS: "-avz --delete"
+                  # SOURCE: "docs/.vuepress/dist" # The source directory, path relative to $GITHUB_WORKSPACE root, eg: dist/
+                  # REMOTE_PORT: ${{ secrets.REMOTE_PORT }} # ssh port
+                  # REMOTE_HOST: ${{ secrets.REMOTE_HOST }} # 主机名
+                  # REMOTE_USER: ${{ secrets.REMOTE_USER }} # 连接用户
+                  # TARGET: ${{ secrets.TARGET }}
                   # EXCLUDE: ""
                   # test08
                   # 去阿里云创建并绑定秘钥,私钥就能下载一次,回去删掉之前的重新创建
