@@ -42,4 +42,5 @@ jobs:
                   REMOTE_USER: ${{ secrets.REMOTE_USER }} # 连接用户
                   TARGET: ${{ secrets.TARGET }}
                   # EXCLUDE: ""
+                  # test08
                   # 去阿里云创建并绑定秘钥,私钥就能下载一次,回去删掉之前的重新创建
