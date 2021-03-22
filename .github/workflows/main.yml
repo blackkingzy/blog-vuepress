@@ -19,18 +19,18 @@ jobs:
               with:
                   ref: main
             # action命令，安装Node 14
-            - name:
-                  install Node.js 14
-                  # 使用action库  actions/setup-node安装node
-              uses: actions/setup-node@v2
-              with:
-                  node-version: "14"
-                  check-latest: true # 检查14最新的版本
-            # action命令，install && test
-            - name: npm install # 运行的命令或者 action
-              run: npm install
-            - name: npm build
-              run: npm run build
+            # - name:
+            #       install Node.js 14
+            #       # 使用action库  actions/setup-node安装node
+            #   uses: actions/setup-node@v2
+            #   with:
+            #       node-version: "14"
+            #       check-latest: true # 检查14最新的版本
+            # # action命令，install && test
+            # - name: npm install # 运行的命令或者 action
+            #   run: npm install
+            # - name: npm build
+            #   run: npm run build
             - name: multiple command
               uses: appleboy/ssh-action@master
               with:
