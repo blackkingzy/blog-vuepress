@@ -37,20 +37,11 @@ jobs:
                 host: ${{ secrets.REMOTE_HOST }}
                 port: ${{ secrets.REMOTE_PORT }}
                 username: ${{ secrets.REMOTE_USER }}
-                password: ${{ secrets.PASSWORD }}
-                #key: ${{ secrets.PRIVATE_KEY }}
+                # password: ${{ secrets.PASSWORD }}
+                key: ${{ secrets.PRIVATE_KEY }}
                 script: |
                  whoami
-                 ls -al
-            # - name: Deploy to Server #通过ssh将文件传到阿里云服务器上 https://github.com/marketplace/actions/ssh-deploy
-            #   uses: easingthemes/ssh-deploy@v2.1.5
-            #   env:
-            #       SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }} # 私钥部分,公钥到阿里云的authorized_keys去找
-            #       # ARGS: "-avz --delete"
-            #       SOURCE: "docs/.vuepress/dist" # The source directory, path relative to $GITHUB_WORKSPACE root, eg: dist/
-            #       REMOTE_PORT: ${{ secrets.REMOTE_PORT }} # ssh port
-            #       REMOTE_HOST: ${{ secrets.REMOTE_HOST }} # 主机名
-            #       REMOTE_USER: ${{ secrets.REMOTE_USER }} # 连接用户
-            #       TARGET: ${{ secrets.TARGET }}
-                  # EXCLUDE: ""
-                  # 去阿里云创建并绑定秘钥,私钥就能下载一次,回去删掉之前的重新创建
+                 ls -a
+                #  cd ./blog-vuepress
+                #  git pull
+                #  npm run build
