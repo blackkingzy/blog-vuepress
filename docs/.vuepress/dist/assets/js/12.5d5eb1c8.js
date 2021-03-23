@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{461:function(t,e,n){"use strict";n.r(e);var s=n(7),a=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"home_content"},[e("BaseListLayout")],1)}),[],!1,null,null,null);e.default=a.exports}}]);
