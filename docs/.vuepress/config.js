@@ -93,7 +93,7 @@ module.exports = {
                     repo: "blog-vuepress", //github一个项目的名称 *
                     // The clientId & clientSecret introduced in OAuth2 spec.
                     clientId: "3b08ad4f82317493e170", //注册的Client ID *
-                    clientSecret: "41486928cae0fe11f08e5549b5b4457685871f59", //注册的Client Secret *
+                    clientSecret: "a4fa0f82322d8a886cb1f48f782065f1801d3c2a", //注册的Client Secret *
                     // proxy: (url) => `http://8.131.241.109:8080/target/${url}`, // 根本没用
                     autoCreateIssue: true, // 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了。
                 },
