@@ -109,6 +109,8 @@ module.exports = {
                 feed: {
                     canonical_base: "http://www.blackyue.com", // *
                 },
+                serviceWorker: true, // 开启pwa
+                updatePopup: true,  // 开启pwa
             },
         ],
     ],
