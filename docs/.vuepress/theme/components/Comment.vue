@@ -29,7 +29,6 @@ export default {
         },
 
         commentProps() {
-            console.log(this.propsWithoutEmptyProperties);
             return Object.assign(
                 {},
                 this.propsWithoutEmptyProperties,
