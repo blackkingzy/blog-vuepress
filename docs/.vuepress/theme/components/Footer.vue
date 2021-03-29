@@ -15,24 +15,28 @@
                         <a
                             class="github"
                             target="_blank"
-                            href="2021/03/18/why/#_5、源码地址"
+                            href="https://www.blackyue.com/2021/03/18/why/#_5、源码地址"
                         ></a>
                     </li>
                     <li>
                         <a
                             class="wechat"
                             target="_blank"
-                            href="2021/03/18/why/#_6、微信二维码"
+                            href="https://www.blackyue.com/2021/03/18/why/#_6、微信二维码"
                         ></a>
                     </li>
                     <li>
-                        <a class="qq"></a>
+                        <a
+                            class="qq"
+                            target="_blank"
+                            href="https://www.blackyue.com/2021/03/18/why/#_6、微信二维码"
+                        ></a>
                     </li>
                     <li class="site_details">
                         <a
                             class="Info"
                             target="_blank"
-                            href="2021/03/18/why/#_6、微信二维码"
+                            href="https://www.blackyue.com/2021/03/18/why/#_6、微信二维码"
                         ></a>
                     </li>
                 </ul>
