@@ -19,7 +19,9 @@ jobs:
                 port: ${{ secrets.REMOTE_PORT }}
                 username: ${{ secrets.REMOTE_USER }}
                 key: ${{ secrets.PRIVATE_KEY }}
+                # 在需要更新包的时候执行npm install
                 script: |
                  cd ./blog-vuepress
+                 npm install
                  git pull
                  npm run build
