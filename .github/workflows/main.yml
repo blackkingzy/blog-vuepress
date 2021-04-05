@@ -22,6 +22,6 @@ jobs:
                 # 在需要更新包的时候执行npm install
                 script: |
                  cd ./blog-vuepress
-                 npm install
                  git pull
+                 npm install
                  npm run build
