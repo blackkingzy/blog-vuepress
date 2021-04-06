@@ -15,10 +15,10 @@ location: DaLian
 
 主线程中即可以执行 js，也可以执行渲染工作，但由于主线程是单线程，所以 js 的执行和页面渲染是互斥的，只有在 js 执行完(js 引擎空闲时)才会进行 UI 渲染
 
-:::tip
+
 对于浏览器来说，不同的标签页有着不同的主线程，每个标签页都是靠同一个 JS 引擎来执行，但是他们的主线程是分离的，执行上下文也是分离的。  
-总结：每个标签页都是独立的
-:::
+`总结：每个标签页都是独立的`
+
 
 ## 浏览器的多线程
 
@@ -45,7 +45,7 @@ Event Loop 是一种机制，直白的理解就是循环去任务队列中去取
 
 ![执行顺序](https://www.blackyue.com/microtask-macrotask.png)
 
-[pdf]（https://www.blackyue.com/microtask-macrotask.pdf）
+[pdf](https://www.blackyue.com/microtask-macrotask.pdf)
 
 ## 浏览器的 debug
 
