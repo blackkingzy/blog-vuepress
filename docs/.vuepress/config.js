@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-    title: "BLACKKINGZY", // *
+    title: "yueBlog", // *
     description: "study and life", // *
     head: [
         ["link", { rel: "icon", href: "/logo.png" }],

@@ -6,8 +6,13 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权所有 www.blackyue.com
             </div>
             <div>
-                <span class="police"></span>蒙ICP备20001860号
-                京公网安备21021102000825号
+                <span class="police"></span>
+                <a
+                    target="_blank"
+                    href="https://beian.miit.gov.cn/"
+                >
+                    蒙ICP备20001860号 京公网安备21021102000825号</a
+                >
             </div>
             <div>
                 <ul class="icon-list">
